@@ -1,0 +1,182 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+
+{% block title %}Shop - PharmaCart{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/medicine.css' %}">
+<main class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h2 style="margin-left: 450px; width: 620px;">Medicine</h2>
+        </div>
+    </div>
+</main>
+<div class="medicine-box">
+<div class="catogory-2">
+    <div class="categories-2-1">
+        <img src="{% static 'Images/paracetamol.jpg' %}" alt="Paracetamol">
+        <h6>Paracetamol</h6>
+        <h4 class="cat-2-h4-1">Used for pain relief and fever reduction.</h4>
+        <div class="rating">3.2 <i class="fa-regular fa-star"></i></div>
+        <div class="pricing">
+            <span class="mrp">MRP<i class="fa-solid fa-indian-rupee-sign"></i>100</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>89.00</span>
+        </div>
+        <div class="product-actions">
+            <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+        </div>
+    </div>
+
+    <div class="categories-2-1">
+        <img src="{% static 'Images/Ibuprofenmedicine.jpg' %}" alt="Ibuprofen">
+        <h6>Ibuprofen</h6>
+        <h4 class="cat-2-h4-1">pain reliever and anti-inflammatory drug.
+        </h4>
+        <div class="rating">4.2 <i class="fa-regular fa-star"></i></div>
+        <div class="pricing">
+            <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>100</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>76.00</span>
+        </div>
+        <div class="product-actions">
+            <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+        </div>
+    </div>
+    <div class="categories-2-1">
+        <img src="{% static 'Images/Insulinmedicine.jpg' %}" alt="Insulin">
+        <h6>Insulin</h6>
+        <h4 class="cat-2-h4-1">Helps control blood sugar levels in diabetes.</h4>
+        <div class="rating">4.1<i class="fa-regular fa-star"></i></div>
+        <div class="pricing">
+            <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>350</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>259.00</span>
+        </div>
+        <div class="product-actions">
+            <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+        </div>
+    </div>
+
+    <div class="categories-2-1">
+        <img src="{% static 'Images/vitamineb12meddicine.jpg' %}" alt="Vitamin B12 ">
+        <h6>Vitamin B12 </h6>
+        <h4 class="cat-2-h4-1">Important for nerve function and red blood celi</h4>
+        <div class="rating">4.5<i class="fa-regular fa-star"></i></div>
+        <div class="pricing">
+            <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>259</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>119.00</span>
+        </div>
+        <div class="product-actions">
+            <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+        </div>
+    </div>
+
+
+    
+
+</div>
+<div class="catogory-2">
+    <div class="categories-2-1">
+        <img src="{% static 'Images/multivitamin.png' %}" alt="Vitamin serup">
+        <h6>Vitamin serup</h6>
+        <h4 class="cat-2-h4-1">Multivitamin Bottle</h4>
+        <div class="rating">3.5<i class="fa-regular fa-star"></i></div>
+        <div class="pricing">
+            <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>100</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>89.00</span>
+        </div>
+        <div class="product-actions">
+            <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+        </div>
+    </div>
+
+    <div class="categories-2-1">
+        <img src="{% static 'Images/bandag.png' %}" alt="Bandag">
+        <h6>Bandag</h6>
+        <h4 class="cat-2-h4-1">Crepe Bandage Roll </h4>
+        <div class="rating">3.9<i class="fa-regular fa-star"></i></div>
+        <div class="pricing">
+            <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>150</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>109.00</span>
+        </div>
+        <div class="product-actions">
+            <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+        </div>
+    </div>
+
+    <div class="categories-2-1">
+        <img src="{% static 'Images/hearttemp.png' %}" alt="Infrared-thermometer">
+        <h6>Heartbeat Temp</h6>
+        <h4 class="cat-2-h4-1">Infrared Thermometer</h4>
+        <div class="rating">4.5<i class="fa-regular fa-star"></i></div>
+        <div class="pricing">
+            <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>599</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>499.00</span>
+        </div>
+        <div class="product-actions">
+            <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+        </div>
+    </div>
+
+    <div class="categories-2-1">
+        <img src="{% static 'Images/glucon-dinjection.png' %}" alt="glucon-dinjection">
+        <h6>Injection</h6>
+        <h4 class="cat-2-h4-1">Medical Injection Ampoule</h4>
+        <div class="rating">4.7<i class="fa-regular fa-star"></i></div>
+        <div class="pricing">
+            <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>210</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>179.00</span>
+        </div>
+        <div class="product-actions">
+            <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+        </div>
+    </div>
+    
+  
+
+
+</div>
+<div class="catogory-2">
+<div class="categories-2-1">
+    <img src="{% static 'Images/Cremaffin Constipation Relief.jpg' %}" alt="Cremaffin Constipation Relief">
+    <h6>stomactch-care</h6>
+    <h4 class="cat-2-h4-1">Cremaffin Constipation Relief Liquid 450ml</h4>
+    <div class="rating">4.7<i class="fa-regular fa-star"></i></div>
+    <div class="pricing">
+        <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>220</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>169.00</span>
+    </div>
+    <div class="product-actions">
+        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+    </div>
+</div>
+<div class="categories-2-1">
+    <img src="{% static 'Images/petsafa.jpg' %}" alt=" Dr.Juneja's Petsaffa Tablet 30's">
+    <h6>stomactch-care</h6>
+    <h4 class="cat-2-h4-1">Dr.Juneja's Petsaffa Tablet 30's</h4>
+    <div class="rating">4.3<i class="fa-regular fa-star"></i></div>
+    <div class="pricing">
+        <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>210</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>109.00</span>
+    </div>
+    <div class="product-actions">
+        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+    </div>
+</div>
+<div class="categories-2-1">
+    <img src="{% static 'Images/Dabur Janma Ghunti Digestive Tonic 125 ml.jpg' %}" alt=" Dabur Janma Ghunti Digestive Tonic 125 ml">
+    <h6>stomactch-care</h6>
+    <h4 class="cat-2-h4-1">Dabur Janma Ghunti Digestive Tonic 125 ml</h4>
+    <div class="rating">4.3<i class="fa-regular fa-star"></i></div>
+    <div class="pricing">
+        <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>210</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>145.00</span>
+    </div>
+    <div class="product-actions">
+        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+    </div>
+</div>
+<div class="categories-2-1">
+    <img src="{% static 'Images/zandu_pancharishta_syrup_200ml_0_0.jpg' %}" alt=" Zandu Pancharishta Syrup">
+    <h6>stomactch-care</h6>
+    <h4 class="cat-2-h4-1">Zandu Pancharishta Syrup 200ml</h4>
+    <div class="rating">4.3<i class="fa-regular fa-star"></i></div>
+    <div class="pricing">
+        <span class="mrp">MRP <i class="fa-solid fa-indian-rupee-sign"></i>190</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>120.00</span>
+    </div>
+    <div class="product-actions">
+        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,235 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+
+{% block title %}Shop - PharmaCart{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/protinestore.css' %}">
+ <!-- Hero Section -->
+ <main class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h2 style="margin-left: 200px; width: 620px;">Protein Store</h2>
+        </div>
+    </div>
+</main>
+
+
+
+
+<main class="protein-content">
+<div class="container">
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="section-title">
+        <h2>Browse Categories</h2>
+        <p>Find the perfect protein supplement for your fitness goals</p>
+    </div>
+    <div class="categories-grid">
+        <div class="category-card">
+            <div class="category-icon">
+                <i class="fas fa-dumbbell"></i>
+            </div>
+            <h3>Whey Protein</h3>
+            <p>High-quality protein for muscle growth</p>
+        </div>
+        <div class="category-card">
+            <div class="category-icon">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Plant Protein</h3>
+            <p>Vegan-friendly protein options</p>
+        </div>
+        <div class="category-card">
+            <div class="category-icon">
+                <i class="fas fa-fire"></i>
+            </div>
+            <h3>Mass Gainers</h3>
+            <p>For muscle mass and weight gain</p>
+        </div>
+        <div class="category-card">
+            <div class="category-icon">
+                <i class="fas fa-running"></i>
+            </div>
+            <h3>Pre-Workout</h3>
+            <p>Energy boost for workouts</p>
+        </div>
+    </div>
+</section>
+
+            <!-- Products Grid -->
+            <section id="products" class="products-section">
+                <div class="section-title">
+                    <h2>Featured Products</h2>
+                    <p>Top-rated protein supplements for your fitness journey</p>
+                </div>
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{% static 'Images/whey-protein.webp' %}" alt="Whey Protein">
+                            <span class="product-badge">Best Seller</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Whey Protein</span>
+                            <h3 class="product-title">Premium Whey Isolate</h3>
+                            <p class="product-description">Pure whey protein isolate for maximum muscle growth and recovery.</p>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="product-reviews">(125 reviews)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="old-price"> <i class="fa-solid fa-indian-rupee-sign"></i>1900</span> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>1699.00</span>
+                            </div>
+                            <div class="product-actions">
+                                <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                                <!-- <a href="shop.html" class="view-details">View Details</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{% static 'Images/peanutbutter.webp' %}" alt="Daily-protine">
+                            <span class="product-badge">Vegan</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Daily Protein</span>
+                            <h3 class="product-title">Natural Peanut Butter Crunchy</h3>
+                            <p class="product-description">100% plant-based protein powder for vegans and vegetarians.</p>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="product-reviews">(89 reviews)</span>
+                            </div>
+                            <div class="product-price"> &nbsp; <span class="price"><i class="fa-solid fa-indian-rupee-sign"></i>1991.00</div>
+                            <div class="product-actions">
+                                <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{% static 'Images/mass-gainer.webp' %}" alt="Mass Gainer">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Mass Gainer</span>
+                            <h3 class="product-title">Ultimate Mass Gainer</h3>
+                            <p class="product-description">High-calorie formula for serious mass and muscle gain.</p>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="product-reviews">(56 reviews)</span>
+                            </div>
+                            <div class="product-price"> <i class="fa-solid fa-indian-rupee-sign"></i>1054.00    </div>
+                            <div class="product-actions">
+                                <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="{% static 'Images/preworkout.webp' %}" alt="Pre-Workout">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Pre-Workout</span>
+                            <h3 class="product-title">Power Pre-Workout</h3>
+                            <p class="product-description">Advanced formula for energy, focus, and pump during workouts.</p>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="product-reviews">(78 reviews)</span>
+                            </div>
+                            <div class="product-price"> <i class="fa-solid fa-indian-rupee-sign"></i>2399.00</div>
+                            <div class="product-actions">
+                                <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                     <!-- Product 5 -->
+                     <div class="product-card">
+                        <div class="product-image">
+                            <img src="{% static 'Images/multivitamin-protein.webp' %}" alt="MuscleBlaze Biozyme Performance Whey Protein">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">whey-protein</span>
+                            <h3 class="product-title">Multivitamins </h3>
+                            <p class="product-description">Clinically tested for 50% higher protein absorption, offering 25g of protein per serving.</p>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="product-reviews">(58 reviews)</span>
+                            </div>
+                            <div class="product-price"> <i class="fa-solid fa-indian-rupee-sign"></i>2599.00</div>
+                            <div class="product-actions">
+                                <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Product 6 -->
+                     <div class="product-card">
+                        <div class="product-image">
+                            <img src="{% static 'Images/shaker-gainer.webp' %}" alt="Isopure Zero Carb Protein Powder">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Workout-powdwer</span>
+                            <h3 class="product-title">Shake & Gain Combo</h3>
+                            <p class="product-description"> Provides 25g of 100% whey protein isolate per serving with zero sugar and carbs.</p>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="product-reviews">(88 reviews)</span>
+                            </div>
+                            <div class="product-price"> <i class="fa-solid fa-indian-rupee-sign"></i>2679.00</div>
+                            <div class="product-actions">
+                                <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+{% endblock %}

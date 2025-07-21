@@ -1,0 +1,33 @@
+/* Apply animations */
+.hero, .protein-hero, .categories-section, .products-section, footer {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.nav-left, .logo, .nav-right {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.menu, .offer-btn {
+    animation: slideInRight 1s ease-in-out;
+}
+
+.category-card {
+    transition: all 0.3s ease;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    animation: hoverEffect 0.3s ease-in-out;
+}
+
+.product-card {
+    animation: bounceIn 1s ease-in-out;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    animation: hoverEffect 0.3s ease-in-out;
+}
+

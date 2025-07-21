@@ -1,0 +1,29 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+{% block title %}Consult Our Doctors{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-primary fw-bold mb-4 text-center">Consult Our Doctors</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        {% for doctor in doctors %}
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="{% if doctor.image %}{{ doctor.image.url }}{% else %}{% static 'Images/doctor-placeholder.jpg' %}{% endif %}" 
+                     class="card-img-top" alt="{{ doctor.name }}" style="height: 200px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ doctor.name }}</h5>
+                    <p class="text-muted">{{ doctor.specialization }}</p>
+                    <a href="https://wa.me/{{ doctor.whatsapp_number|cut:'+'|cut:' ' }}"
+ 
+                       target="_blank" 
+                       class="btn btn-success w-100">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

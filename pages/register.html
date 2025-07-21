@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - PharmaCart</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body class="register-page">
+    <div class="register-container">
+        <div class="register-box">
+            <div class="register-header">
+                <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.16.29/icons/user-plus.svg" alt="Register">
+                <h1>Create your PharmaCart Account</h1>
+                <p>Already have an account? <a href="login.html">Sign in</a></p>
+            </div>
+
+            <form class="register-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Create a password">
+                    <span class="password-requirements">Must be at least 8 characters long</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+                </div>
+
+                <div class="form-checkbox">
+                    <label class="checkbox-label">
+                        <input type="checkbox" required>
+                        <span>I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="register-button">Create Account</button>
+            </form>
+
+            <div class="social-login">
+                <div class="divider">
+                    <span>Or register with</span>
+                </div>
+                <div class="social-buttons">
+                    <button class="social-button">
+                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.16.29/icons/mail.svg" alt="Google">
+                        Google
+                    </button>
+                    <button class="social-button">
+                        <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.16.29/icons/facebook.svg" alt="Facebook">
+                        Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,410 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+
+{% block title %}Shop - PharmaCart{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/beauty.css' %}">
+
+<div class="beauty-container">
+    <h1>DISCOVER YOUR NATURAL BEAUTY</h1>
+    <p>Explore our premium collection of beauty and skincare products. From luxurious creams to essential oils, we have everything you need for your beauty routine.</p>
+    <a href="{% url 'shop'%}" class="btn">Shop Now</a>
+</div>
+
+
+<main>
+    <div class="container">
+        <!-- Categories -->
+        <section class="beauty-categories">
+            <div class="section-title">
+                <h2 >Beauty Categories</h2>
+                
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Skincare</h3>
+                    <p>Premium skincare products</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-pump-soap"></i>
+                    </div>
+                    <h3>Body Care</h3>
+                    <p>Luxurious body care items</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-air-freshener"></i>
+                    </div>
+                    <h3>Hair Care</h3>
+                    <p>Professional hair products</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Makeup</h3>
+                    <p>Beauty essentials</p>
+                </div>
+            </div>
+        </section>
+
+
+        
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="section-title">
+            <h2>Our Beauty Products</h2>
+            
+        </div>
+
+       
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/facialcream.png' %}" alt="Facial Cream">
+                    <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Skincare</span>
+                    <h3 class="product-title">Hydrating Facial Cream</h3>
+                    <p class="product-description">Rich moisturizing cream for all skin.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="product-reviews">(128 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price"><i class="fa-solid fa-indian-rupee-sign"></i>600</span>
+                        <i class="fa-solid fa-indian-rupee-sign"></i>539.00
+                    </div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/vitamin-c-serum.png' %}" alt="Serum">
+                    <span class="product-badge">Best Seller</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Skincare</span>
+                    <h3 class="product-title">Vitamin C Serum</h3>
+                    <p class="product-description">Brightening serum for radiant skin.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="product-reviews">(256 reviews)</span>
+                    </div>
+                    <div class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i>244.00</div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/shampo.png' %}" alt="Shampoo">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Hair Care</span>
+                    <h3 class="product-title">Hibiscus Shampoo</h3>
+                    <p class="product-description">Sulfate-free formula for healthy hair.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="product-reviews">(89 reviews)</span>
+                    </div>
+                    <div class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i>329.00</div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/cetaphil-gel-cleanser.webp' %}" alt="cetaphil-gel-cleanser">
+                    <span class="product-badge">Sale</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Cleanser</span>
+                    <h3 class="product-title">Face cleanser</h3>
+                    <p class="product-description">Long-day coverage for all skin </p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="product-reviews">(167 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price"><i class="fa-solid fa-indian-rupee-sign"></i>734.00</span>
+                        <i class="fa-solid fa-indian-rupee-sign"></i>700.00
+                    </div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/bodylotion.avif' %}" alt="Body Lotion">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Body Care</span>
+                    <h3 class="product-title">Moisturizing Body Lotion</h3>
+                    <p class="product-description">24-hour hydration for soft skin.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="product-reviews">(92 reviews)</span>
+                    </div>
+                    <div class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i>500.00</div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/facemask.png' %}" alt="Face Mask">
+                    <span class="product-badge">Popular</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Skincare</span>
+                    <h3 class="product-title">Clay Face Mask</h3>
+                    <p class="product-description">Deep cleansing mask for clear skin.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="product-reviews">(145 reviews)</span>
+                    </div>
+                    <div class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i>129.00</div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/hairoil.webp' %}" alt="Hair Oil">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Hair Care</span>
+                    <h3 class="product-title">Argan Hair Oil</h3>
+                    <p class="product-description">Nourishing oil for silky smooth hair.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="product-reviews">(178 reviews)</span>
+                    </div>
+                    <div class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i>499.00</div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/facewash-cetaphil.jpg' %}" alt="facewash">
+                    <span class="product-badge">New</span>
+                </div>
+                <div class="product-info">
+                    <span class="product-category">skincare</span>
+                    <h3 class="product-title">Skin-whitening facewash</h3>
+                    <p class="product-description">Long-lasting color rich pigments.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="product-reviews">(134 reviews)</span>
+                    </div>
+                    <div class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i>324.00</div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/eyecream-cetaphil.jpg' %}" alt="Eye Cream">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Skincare</span>
+                    <h3 class="product-title">Anti-Aging Eye Cream</h3>
+                    <p class="product-description">Reduces fine lines and dark circles.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="product-reviews">(198 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price"><i class="fa-solid fa-indian-rupee-sign"></i>554.00</span>
+                        <i class="fa-solid fa-indian-rupee-sign"></i>449.00
+                    </div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/face-scrub.jpg' %}" alt="Face Scrub">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Skincare</span>
+                    <h3 class="product-title">Gentle Face Scrub</h3>
+                    <p class="product-description">Exfoliating scrub for smooth skin.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="product-reviews">(156 reviews)</span>
+                    </div>
+                    <div class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i>399.00</div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Product 11 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/skin-toner.jpg' %}" alt="toner">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Skincare</span>
+                    <h3 class="product-title">skin-toner</h3>
+                    <p class="product-description">Exfoliating skin for smooth skin.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="product-reviews">(100 reviews)</span>
+                    </div>
+                    <div class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i>425.00</div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Product 12 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Images/cetaphil-scrub.jpg' %}" alt="Face Scrub">
+                </div>
+                <div class="product-info">
+                    <span class="product-category">Skincare</span>
+                    <h3 class="product-title">Gentle DailyScrub</h3>
+                    <p class="product-description">Non-Irritating & Hypoallergenic.</p>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="product-reviews">(126 reviews)</span>
+                    </div>
+                    <div class="product-price"><i class="fa-solid fa-indian-rupee-sign"></i>229.00</div>
+                    <div class="product-actions">
+                        <a href="{% url 'shop'%}"><button class="add-to-cart">View All</button></a>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Beautiful, Stay Updated</h2>
+            <p>our newsletter for beauty tips, new products, and exclusive offers.</p>
+            
+        </div>
+    </section>
+</div>
+</main>
+
+{% endblock %}

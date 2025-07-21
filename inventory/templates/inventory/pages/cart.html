@@ -1,0 +1,75 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+{% block title %}Your Cart{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h3 class="text-primary fw-bold mb-4">Your Shopping Cart</h3>
+
+  {% if cart_items %}
+  <div class="table-responsive">
+    <table class="table table-bordered text-center align-middle">
+      <thead class="table-primary">
+        <tr>
+          <th>Image</th>
+          <th>Medicine</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in cart_items %}
+        <tr>
+          <!-- Medicine Image -->
+          <td>
+            <img src="{% if item.medicine.image %}{{ item.medicine.image.url }}{% else %}{% static 'Images/placeholder.jpg' %}{% endif %}"
+                 alt="{{ item.medicine.name }}"
+                 style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+          </td>
+
+          <!-- Medicine Name -->
+          <td>{{ item.medicine.name }}</td>
+
+          <!-- Quantity Controls -->
+          <td>
+            <a href="{% url 'decrease_quantity' item.id %}" class="btn btn-sm btn-outline-secondary">-</a>
+            <span class="mx-2">{{ item.quantity }}</span>
+            <a href="{% url 'increase_quantity' item.id %}" class="btn btn-sm btn-outline-primary">+</a>
+          </td>
+
+          <!-- Price and Total -->
+          <td>₹{{ item.medicine.price }}</td>
+          <td>₹{{ item.total_price }}</td>
+
+          <!-- Remove Button -->
+          <td>
+            <a href="{% url 'remove_item' item.id %}" class="btn btn-sm btn-danger">Remove</a>
+          </td>
+        </tr>
+        {% endfor %}
+
+        <!-- Grand Total -->
+        <tr>
+          <td colspan="5" class="text-end fw-bold">Grand Total:</td>
+          <td class="fw-bold text-success">₹{{ total }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
+  <tr>
+    <td colspan="4" class="text-end">
+      <a href="{% url 'dummy_payment' %}" class="btn btn-success btn-lg mt-3">Proceed to Pay</a>
+    </td>
+  </tr>
+  
+
+
+
+  {% else %}
+  <p class="text-muted">Your cart is empty.</p>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+{% block title %}Search Results - PharmaCart{% endblock %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-primary fw-bold mb-4">Search Results for "{{ query }}"</h2>
+
+    {% if medicines %}
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      {% for medicine in medicines %}
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="{% if medicine.image %}{{ medicine.image.url }}{% else %}{% static 'Images/placeholder.jpg' %}{% endif %}"
+               class="card-img-top p-3"
+               alt="{{ medicine.name }}"
+               style="height: 200px; object-fit: contain;">
+          <div class="card-body">
+            <h5 class="card-title">{{ medicine.name }}</h5>
+            <p><strong>Brand:</strong> {{ medicine.brand }}</p>
+            <p><strong>Price:</strong> ₹{{ medicine.price }}</p>
+            <p><strong>Quantity:</strong> {{ medicine.quantity }}</p>
+            <p class="text-muted small">Expires on {{ medicine.expiry_date }}</p>
+
+            <form method="POST" action="{% url 'add_to_cart' medicine.id %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-sm btn-success mt-2 w-100">Add to Cart</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-muted">No medicines matched your search.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

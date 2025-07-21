@@ -1,0 +1,92 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+
+{% block title %}Shop - PharmaCart{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/features.css' %}">
+
+<!-- Hero Section -->
+<main class="hero">
+    <div class="container">
+        <div class="hero-content text-center py-5">
+            <h2 class="display-4">Product Categories</h2>
+        </div>
+    </div>
+</main>
+
+
+<!-- Features Section -->
+<section class="features">
+    <div class="feature-container">
+        <h2>Smart Features</h2>
+        <div class="features-list">
+            <div class="feature-box">
+                <i class="fas fa-brain"></i>
+                <h3>Smart Recommendations</h3>
+                <p>Personalized medicine suggestions based on your health profile.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-credit-card"></i>
+                <h3>Flexible Payments</h3>
+                <p>Online payments & Cash on Delivery options available.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-file-upload"></i>
+                <h3>Upload Prescription</h3>
+                <p>Easily upload your prescription for quick ordering.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Prescription Upload Section -->
+<section class="prescription-upload">
+    <div class="container">
+        <h2>Upload Your Prescription</h2>
+        <div class="upload-box">
+            <label for="prescription-file">
+                <i class="fas fa-upload"></i>
+                <p>Click to Upload or Drag & Drop</p>
+                <small>Accepted formats: JPG, PNG, PDF (Max: 5MB)</small>
+            </label>
+            <input type="file" id="prescription-file" accept=".jpg, .png, .pdf">
+        </div>
+    </div>
+</section>
+
+<!-- Smart Recommendations Section -->
+<section class="smart-recommendations">
+    <div class="container">
+        <h2>Smart Recommendations</h2>
+        <div class="recommendation-list">
+
+            <div class="recommendation-item">
+                <!-- <img src="{% static 'Images/immunitybootster.png' %}" alt="Immunity Booster"> -->
+                <h3>Immunity Boosters</h3>
+                <p>Based on your health profile.</p>
+                <button>View Products</button>
+            </div>
+
+            <div class="recommendation-item">
+                <!-- <img src="{% static 'Images/vitamin.png' %}" alt="Vitamin Supplements"> -->
+                <h3>Vitamin Supplements</h3>
+                <p>Trending in your area.</p>
+                <button>View Products</button>
+            </div>
+
+            <div class="recommendation-item">
+                <!-- <img src="{% static 'Images/seasonal.jpg' %}" alt="Seasonal Care"> -->
+                <h3>Seasonal Medicine</h3>
+                <p>Essential medicines for the season.</p>
+                <button>View Products</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

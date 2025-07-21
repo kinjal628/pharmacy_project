@@ -1,0 +1,106 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+
+{% block title %}Shop - PharmaCart{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/collection.css' %}">
+
+<!-- Hero Section -->
+<main class="hero">
+    <div class="container">
+        <div class="hero-content text-center py-5">
+            <h2 class="display-4">Product Categories</h2>
+        </div>
+    </div>
+</main>
+
+<main class="collections-content">
+    <div class="container">
+
+        <!-- Featured Collection -->
+        <div class="featured-collection">
+            <img src="{% static 'Images/premiumhealthcare.png' %}" alt="Premium Healthcare Collection">
+            <div class="featured-overlay">
+                <div class="featured-content">
+                    <h2>Premium Healthcare Collection</h2>
+                    <p>Discover our exclusive range of premium healthcare products, carefully curated for your well-being.</p>
+                    <a href="#" class="shop-now-btn">Shop Collection</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collection Grid -->
+        <div class="collections-grid">
+
+            <div class="collection-card">
+                <img src="{% static 'Images/immunitybootster.png' %}" alt="Immunity Boosters" class="collection-image">
+                <div class="collection-overlay">
+                    <h3>Immunity Boosters</h3>
+                    <p>Natural supplements to strengthen your immune system</p>
+                    <a href="#" class="view-collection">View Collection</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="{% static 'Images/image-2.avif' %}" alt="Wellness Essentials" class="collection-image">
+                <div class="collection-overlay">
+                    <h3>Wellness Essentials</h3>
+                    <p>Daily wellness products for a healthy lifestyle</p>
+                    <a href="#" class="view-collection">View Collection</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="{% static 'Images/neuralherbal.png' %}" alt="Natural Remedies" class="collection-image">
+                <div class="collection-overlay">
+                    <h3>Natural Remedies</h3>
+                    <p>Traditional and herbal healing solutions</p>
+                    <a href="#" class="view-collection">View Collection</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="{% static 'Images/sportsneutrision.png' %}" alt="Sports Nutrition" class="collection-image">
+                <div class="collection-overlay">
+                    <h3>Sports Nutrition</h3>
+                    <p>Performance enhancing supplements and products</p>
+                    <a href="#" class="view-collection">View Collection</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="{% static 'Images/beautyskincare.png' %}" alt="Beauty & Skincare" class="collection-image">
+                <div class="collection-overlay">
+                    <h3>Beauty & Skincare</h3>
+                    <p>Premium skincare and beauty products</p>
+                    <a href="#" class="view-collection">View Collection</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <img src="{% static 'Images/babycare.png' %}" alt="Baby Care" class="collection-image">
+                <div class="collection-overlay">
+                    <h3>Baby Care</h3>
+                    <p>Products for baby health and relaxation</p>
+                    <a href="#" class="view-collection">View Collection</a>
+                </div>
+            </div>
+
+        </div>     
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <h2>Stay Updated with New Collections</h2>
+            <p>Subscribe to our newsletter and be the first to know about new collections, exclusive offers, and health tips.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+    </div>
+</main>
+
+{% endblock %}

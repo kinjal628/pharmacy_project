@@ -1,0 +1,197 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+
+{% block title %}Shop - PharmaCart{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/categoiry.css' %}">
+
+<!-- Hero Section -->
+<main class="hero">
+    <div class="container">
+        <div class="hero-content text-center py-5">
+            <h2 class="display-4" style="margin-left: 280px; width: 620px;">Product Categories</h2>
+        </div>
+    </div>
+</main>
+
+<main class="categories-content">
+    <div class="container">
+        <!-- Featured Categories -->
+        <section class="featured-categories">
+            <div class="section-title">
+                <div class="marquee-container">
+                    <div class="marquee-text"><i class="fa-solid fa-stethoscope" style="color: #191a19;"></i>Doctor Consult</div>
+                </div>
+                <p>Find everything you need for your health and wellness</p>
+            </div>
+            <div class="docter-consult">
+                <img src="{% static 'Images/docter-consult11 copy.jpg' %}" alt="Call Icon">
+            </div>
+            <div class="why-choose-section">
+                <h2>Why choose us</h2>
+                <div class="top-box">
+                    <div class="free-follow-up">
+                        <img src="{% static 'Images/call-icon_img-removebg-preview.png' %}" alt="free -follow up">
+                        <div>
+                            <h3>Free Follow-up Post Consultation</h3>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="grid">
+                    <div class="box">
+                        <img src="{% static 'Images\docter-icon-removebg-preview_copy-removebg-preview.png' %}" alt="docter Icon">                        <h3>24×7 availability of Doctors</h3>
+                        <p>Get medical help round the clock</p>
+                    </div>
+                    
+                </div>
+        
+                <div class="bottom-boxes">
+                    <div class="box">
+                        <img src="{% static 'Images/cost-effective-removebg-preview copy.png' %}" alt="Cost Effective">
+                        <h3>Cost-Effective</h3>
+                        <p>Affordable consultation from the comfort of your home.</p>
+                    </div>
+                    <div class="box">
+                        <img src="{% static 'Images\privacy-security-icon.jpg'%}" alt="Privacy Security" >
+                        <h3>Privacy and Security</h3>
+                        <p>100% confidential consultations.</p>
+                    </div>
+                </div>
+            </div>
+
+<main class="categories-content">
+    <div class="container">
+        <!-- Featured Categories -->
+        <section class="featured-categories">
+            <div class="section-title">
+                <h2>Browse Our Categories</h2>
+                <p>Find everything you need for your health and wellness</p>
+            </div>
+
+            <!-- Category Grid -->
+            <div class="category-grid-container">
+
+                <!-- Category Card 7 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="{% static 'Images/news3.png' %}" alt="Fitness Equipment">
+                        <div class="category-overlay">
+                            {% comment %} <a href="#" class="view-products">View Products</a> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Fitness Equipment</h3>
+                        <span class="product-count">42 Products</span>
+                        <p class="category-description">High-quality fitness equipment for home workouts.</p>
+                    </div>
+                </div>
+
+                <!-- Category Card 8 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="{% static 'Images/aryuwedic2.png' %}" alt="Ayurvedic Products">
+                        <div class="category-overlay">
+                            {% comment %} <a href="#" class="view-products">View Products</a> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Ayurvedic Products</h3>
+                        <span class="product-count">35 Products</span>
+                        <p class="category-description">Traditional Ayurvedic medicines and supplements.</p>
+                    </div>
+                </div>
+
+                <!-- Category Card 9 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="{% static 'Images/dentalcare.png' %}" alt="Dental Care">
+                        <div class="category-overlay">
+                            {% comment %} <a href="#" class="view-products">View Products</a> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Dental Care</h3>
+                        <span class="product-count">29 Products</span>
+                        <p class="category-description">Complete oral hygiene and dental care products.</p>
+                    </div>
+                </div>
+
+                <!-- Category Card 10 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="{% static 'Images/beautyskincare.png' %}" alt="Beauty & Skincare">
+                        <div class="category-overlay">
+                            {% comment %} <a href="#" class="view-products">View Products</a> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Beauty & Skincare</h3>
+                        <span class="product-count">48 Products</span>
+                        <p class="category-description">Premium skincare and beauty products.</p>
+                    </div>
+                </div>
+
+                <!-- Category Card 11 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="{% static 'Images/medicaldevice.png' %}" alt="Medical Devices">
+                        <div class="category-overlay">
+                            {% comment %} <a href="#" class="view-products">View Products</a> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Medical Devices</h3>
+                        <span class="product-count">31 Products</span>
+                        <p class="category-description">Essential medical devices and equipment.</p>
+                    </div>
+                </div>
+
+                <!-- Category Card 12 -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="{% static 'Images/healthcarefood.png' %}" alt="Health Foods">
+                        <div class="category-overlay">
+                            {% comment %} <a href="#" class="view-products">View Products</a> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="category-info">
+                        <h3>Health Foods</h3>
+                        <span class="product-count">44 Products</span>
+                        <p class="category-description">Nutritious and healthy food products.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Popular Main -->
+<div class="popular-main">
+    <p>EXPLORE</p>
+    <h2>Popular Categories</h2>
+    <div class="categories-1">
+        <div class="cat-c1"><img src="{% static 'Images/protine1.png' %}" alt=""><p>HEALTH & PROTEIN</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/med1.png' %}" alt=""><p>Vitamin C Tablet</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/medicine-kit.png' %}" alt=""><p>Medicine Kit</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/womancare.webp' %}" alt=""><p>Woman Care</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/jonsonbaby.jpg' %}" alt=""><p>Baby Care</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/aryuvedic1.webp' %}" alt=""><p>Ayurvedic-Care</p></div>
+    </div>
+    
+    <div class="categories-1">
+        <div class="cat-c1"><img src="{% static 'Images/personcare.png' %}" alt=""><p>Personal Care</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/heartcare.webp' %}" alt=""><p>Heart Care</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/diabeticcare.webp' %}" alt=""><p>Diabetic Care</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/eldercare.webp' %}" alt=""><p>Orthopadic Care</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/vixwrpper.webp' %}" alt=""><p>Vicks Inhaler</p></div>
+        <div class="cat-c1"><img src="{% static 'Images/cough.png' %}" alt=""><p>Allopathy-Care</p></div>
+    </div>
+</div>
+
+
+
+{% endblock %}

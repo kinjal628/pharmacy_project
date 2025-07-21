@@ -1,0 +1,187 @@
+{% extends "inventory/base.html" %}
+
+
+{% load static %}
+
+{% block title %}Home - PharmaCart{% endblock %}
+
+{% block content %}
+<main class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="subtitle">Welcome to PharmaCart</span>
+            <h1><span>TOP</span> DEAL!</h1>
+            <h2>ONLINE PHARMACY</h2>
+            <p>Get up to 50% off Today Only</p>
+            <div class="hero-buttons">
+                <a href="{% url 'shop'%}"><button class="primary-btn" >Shop Now</button></a>
+                <a href="{% url 'contact'%}"><button class="secondary-btn">CONTACT US</button></a>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- Featured Categories -->
+<section class="featured-categories">
+    <div class="container">
+        <h2 class="section-title">Featured Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                
+                <h3>Medicine</h3>
+                <p>10 Products</p>
+            </div>
+            <div class="category-card">
+ 
+                <h3>Protein</h3>
+                <p>10 Products</p>
+            </div>
+            <div class="category-card">
+
+                <h3>Personal Care</h3>
+                <p>10 Products</p>
+            </div>
+            <div class="category-card">
+             
+                <h3>Beauty Care</h3>
+                <p>10 Products</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- card section----------------- -->
+<div class="card-container">
+    <!-- Card 1 -->
+    <div class="card-1">
+        <div>
+            <h4>Beauty pack</h4>
+            <h2>Facial Mask Up to 35%</h2>
+        </div>
+    </div>
+
+      <!-- Card 2 -->
+      <div class="card-2">
+        <div>
+            <h4>Beauty pack</h4>
+            <h2>Face wash Up to 35%</h2>
+        </div>
+    </div>
+
+      <!-- Card 3 -->
+      <div class="card-3">
+        <div>
+            <h4>Beauty pack</h4>
+            <h2>Creame Bright Up to 35%</h2>
+        </div>
+    </div>
+</div>
+<section class="banner">
+    <div class="banner-content">
+        <h4>MEDICAL PACK</h4>
+        <h1>LAB FACE MASK <br> UP TO 25%</h1>
+        <p>Protect yourself with high-quality medical essentials. <br>
+            "Shop Now" or "Get Yours Today"
+        </p>
+    </div>
+    <div class="banner-image">
+        <img src="{% static 'Images/buymed-back.png' %}" alt="Woman wearing a mask and gloves">
+    </div>
+</section>  
+
+<div class="deals-section" style="margin-bottom: 800px;">
+    <div class="marquee-container">
+        <div class="marquee-text">🔥 Up To 25% Off on All Deals! Limited Time Offer! 🚀</div>
+    </div>
+    <div class="deals-empty"></div>
+    <h2 class="deal-h2">Deal of this Week</h2>
+    <div class="deals-box">
+        <div class="deals-box1"><p>00</p><p>Days</p></div>
+        <div class="deals-box1"><p>00</p><p>Hour</p></div>
+        <div class="deals-box1"><p>00</p><p>Minute</p></div>
+        <div class="deals-box1"><p>00</p><p>Second</p></div>
+    </div>
+
+    <div class="grid-section">
+        <div class="grid1"><img src="{% static 'Images/hearttemp.png' %}" alt=""></div>
+        <div class="grid2">
+            <img src="{% static 'Images/gridwomen.png' %}" alt="">
+            <img src="{% static 'Images/20%.png' %}" alt="">
+        </div>
+        <div class="grid1"><img src="{% static 'Images/glucon-dinjection.png' %}" alt=""></div>
+        <div class="grid1"><img src="{% static 'Images/gelclener.png' %}" alt=""></div>
+        <div class="grid1"><img src="{% static 'Images/gloves.png' %}" alt=""></div>
+    </div>
+
+    <div class="clint-section">
+        <h2 class="clint-title">OUR CLIENT SAYS</h2>
+        <p class="clint-subtitle"> Your Satisfaction, Our Success</p>
+        <div class="clint-container">
+            <div class="clint-box">
+                <img src="{% static 'Images/client1.png' %}" alt="Client 1" class="clint-image">
+                <p class="clint-quote">The service was outstanding!... Highly recommended!</p>
+                <h3 class="clint-name">Ms.Krina Patel</h3>
+                <p class="clint-role">Marketing Director</p>
+                <div class="clint-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <div class="clint-box">
+                <img src="{% static 'Images/client2.png' %}" alt="Client 2" class="clint-image">
+                <p class="clint-quote">The customer support is fantastic... trustworthy platform!</p>
+                <h3 class="clint-name">Mr.Bhavik Panchal</h3>
+                <p class="clint-role">Senior Product Manager</p>
+                <div class="clint-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+
+            <div class="clint-box">
+                <img src="{% static 'Images/client3.png' %}" alt="Client 3" class="clint-image">
+                <p class="clint-quote">What a great experience... commitment to quality.</p>
+                <h3 class="clint-name">Ms. Diya Patil</h3>
+                <p class="clint-role">Chief Technology Officer (CTO)</p>
+                <div class="clint-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+        </div>
+
+        <div class="clint-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <section class="news-section" >
+        <h2>LATEST NEWS & BLOG</h2>
+        <p>Stay updated with the latest health news and articles.</p>
+        <div class="news-container">
+            <div class="news-card">
+              <img src="{% static 'Images/news1.png' %}" alt="">
+              <div class="news-content">
+                  <h3> Medical Research</h3>
+                  <p>New treatments are emerging that bring hope to millions.</p>
+                  <div class="news-meta"><span>In News</span><span>Mar 10, 2024</span></div>
+              </div>
+            </div>
+
+            <div class="news-card">
+              <img src="{% static 'Images/news2.png' %}" alt="">
+              <div class="news-content">
+                  <h3>Baby’s Health & Nutrition</h3>
+                  <p>Ensuring a strong immune system with proper diet and care.</p>
+                  <div class="news-meta"><span>In News</span><span>Mar 14, 2024</span></div>
+               
+              </div>
+            </div>
+
+            <div class="news-card">
+              <img src="{% static 'Images/news3.png' %}" alt="">
+              <div class="news-content">
+                  <h3>Importance of Dental Care</h3>
+                  <p>Why Dental Check-ups Matter for a Healthy Smile</p>
+                  <div class="news-meta"><span>In News</span><span>Mar 19, 2024</span></div>
+              </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

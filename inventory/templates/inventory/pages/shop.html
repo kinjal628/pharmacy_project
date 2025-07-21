@@ -1,0 +1,86 @@
+
+{% extends 'inventory/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<!-- Hero Section -->
+<main class="hero">
+    <div class="container">
+      <div class="hero-content text-center py-5">
+        <h2 class="display-4" style="margin-left: 280px; width: 620px;">Browse Product Categories</h2>
+      </div>
+    </div>
+  </main>
+  <section class="categories-section py-5 bg-light">
+    <div class="container">
+      <h3 class="text-center text-primary fw-bold mb-5 display-6">Explore Our Categories</h3>
+  
+      {% comment %} <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        {% for category in categories %}
+        {% if category.slug %}
+        <div class="col">
+          <div class="card border-0 shadow-sm rounded-4 h-100 category-card hover-shadow">
+            <a href="{% url 'category_detail' category.slug %}" class="text-decoration-none">
+              <img src="{% if category.image %}{{ category.image.url }}{% else %}{% static 'Images/placeholder.jpg' %}{% endif %}"
+                   class="card-img-top rounded-top-4 p-3"
+                   alt="{{ category.name }}"
+                   style="height: 220px; object-fit: contain;">
+            </a>
+            <div class="card-body text-center">
+              <h5 class="fw-bold text-dark mb-2">{{ category.name }}</h5>
+              {% if category.description %}
+              <p class="text-muted small mb-3">{{ category.description|truncatewords:12 }}</p>
+              {% endif %}
+              <a href="{% url 'category_detail' category.slug %}" class="btn btn-primary btn-sm px-4">
+                View Details
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+  
+      {% if not categories %}
+      <div class="text-center mt-5">
+        <p class="text-muted">No categories available.</p>
+      </div>
+      {% endif %} {% endcomment %}
+
+      <div class="category-container d-flex flex-wrap justify-content-center gap-4">
+        {% for category in categories %}
+        {% if category.slug %}
+        <div class="category-card text-center p-4 shadow-sm rounded-4 bg-white" style="width: 250px;">
+          
+          <!-- You can replace the emoji with a dynamic image or icon later -->
+          {% comment %} <div class="category-icon" style="font-size: 2.5rem;">💊</div> {% endcomment %}
+          
+          <div class="category-title fw-bold mt-3 text-dark">{{ category.name }}</div>
+          
+          {% if category.description %}
+          <div class="category-desc text-muted small mb-3">{{ category.description|truncatewords:10 }}</div>
+          {% endif %}
+          
+          <a href="{% url 'category_detail' category.slug %}" class="btn btn-outline-primary btn-sm mt-2">
+            View Details
+          </a>
+          
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      
+      {% if not categories %}
+      <div class="text-center mt-5">
+        <p class="text-muted">No categories available.</p>
+      </div>
+      {% endif %}
+      
+
+    </div>
+  </section>
+  
+{% endblock %}
